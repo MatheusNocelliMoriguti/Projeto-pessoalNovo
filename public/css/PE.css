@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.body2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(../assets/imgs/dois\ carros.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+
+.container {
+    display: flex;
+    height: 65vh;
+    width: 70%;
+    border: solid red;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.76);
+
+
+}
+
+/* .div_1,
+.div_2,
+.div_3 {
+    
+     height: 100%;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column; 
+    border: solid red;
+} */
+
+
+
+.div_1{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+}
+.div_2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.div_3{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+
+
+
+
+body span {
+    color: white;
+    font-size: 30px;
+    
+
+}
+  .div_1 h1{
+   display: flex;
+   color: white;
+   justify-content: center;
+   font-size: 50px;
+   margin-top: 10px;
+}
+
+.div_1 .numero h1 {
+    display: flex;
+    justify-content: center;
+    color:  white;
+    font-size: 150px;
+    margin-top: -30px;
+    height: 30px;
+    
+}
+
+.div_1 .ponto h1{
+    display: flex;
+    justify-content: center;
+    color:#B00505;
+    font-size: 40px;
+    margin-top: 80px;
+    
+}
+
+.div_2 .imgMax{
+    width: 91%;
+    height: 99%;
+   
+}
+
+.div_3 .max {
+    display: flex;
+    justify-content: center;
+    color:  white;
+    font-size: 37px;
+    font-weight: bold;
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.divredbull{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+#IdImgBandeira{
+    margin-top: 30px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#IdNomeEquipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+
+.divholanda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+
+}
+
+
+.div_3 .divholanda .Holanda{
+    width: 100px;
+}
+
+
+
+.div_3 .divredbull .redbull{
+    width: 140px;
+}
+
+.div_3 .divnomered span {
+    display: flex;
+    justify-content: center;
+    color:  white;
+    font-size: 30px;
+    height: 30px;
+    margin-top: 20px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link class="img-logo" rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styleIndex.css">
+   
+    <link rel="stylesheet" href="./css/sobremim.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/imgs/logo.png">
+            </div>
+            <div class="list-navbar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./PE.html">Equipes & Pilotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./sobremim.html">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inovacao.html">Inovações</a></li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button class="cadastro-button"><a href="./cadastro.html">Cadastre-se</a></button>
+                <button class="login-button"><a href="./login.html">Login</a></button>
+            </div>
+        </nav>
+    </header>
+    <div class="img">
+        <div class="body2">
+            <span>Minha História</span> <br> 
+            <div class="imagensTextoContainer">
+                <div class="imagensMatheus" > <img id="imagemmatheus" ></div>
+                <div class="container">
+                    <span> Desde cedo, desenvolvi uma forte conexão com o mundo dos carros. <br> <br> 
+                        Aos 11 anos,meu pai me introduziu ao mundo dos carros, experiência que despertou em mim uma grande paixão pela velocidade e pelos motores. Com o passar do tempo, comecei a acompanhar a Fórmula 1, embora sem me aprofundar muito. <br> <br> 
+                        Hoje, assisto às corridas com mais frequência e percebo o quanto me identifico com o esporte. Meu pai foi quem me ensinou a dirigir tão jovem, e desde então, esse contato inicial com o volante me levou a descobrir e alimentar meu amor pelo automobilismo e pelo universo dos carros.
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
+<script>
+
+
+    var listaImgns = ['./assets/imgs/matheusfoto.png','./assets/imgs/matheusRenato.jpg'];
+   
+    var i = 0;
+
+    setInterval(trocar, 3000)
+
+    function trocar(){
+            console.log(i);
+            
+            
+            imagemmatheus.src= listaImgns[i]
+            i++
+            
+            if(i == listaImgns.length ){
+                i = 0
+            }
+             
+    }
+
+</script>
+
+
+

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../assets/imgs/formula-one-gn12j3gzs2oa0sii.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: #181818;
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    margin-top: 38px;
+}
+
+.container span {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+body span {
+    color: white;
+    font-size: 30px;
+}
+
+
+
+header {
+    background-color: transparent;
+    box-shadow: 0px 3px 10px;
+    border: none;
+    text-shadow: 2px 2px 0px black;
+      
+}
+
+#card{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+#card2{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+#card3{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all 1s;
+  
+}
+#card4{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+
+
+.cards-container {
+    display: flex;
+    justify-content: center; /* Alinha os cards horizontalmente */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+#card, #card2, #card3, #card4 {
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    width: 270px; /* Ajuste a largura dos cards conforme necessário */
+    height: 310px; /* Ajuste a altura dos cards conforme necessário */
+    align-items: center; /* Centraliza o conteúdo dentro de cada card */
+    text-align: center;
+    margin-top: 30px;
+}
+
+ .inovacao{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 0px black;
+    
+
+}
+.face{
+    width: 270px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;   
+    position: absolute;
+    border-radius: 10px;
+  
+}
+
+#front{
+    background-color: rgb(63, 63, 63);
+    transform: rotateY(180deg);
+    font-size: 4px;
+}
+
+
+#back{
+    background: linear-gradient(145deg, rgb(108, 7, 7), rgb(63, 24, 21));
+    backface-visibility: hidden;
+    
+    
+}
+
+.imagemCombustivel{
+    width: 140px;
+    /* margin-top: 40px; */
+}
+
+.energia{
+    width: 190px;
+   
+}
+.flip{
+    transform: rotateY(180deg);  
+}
+
+#front span{
+    font-size: 20px;
+ 
+}
+
+#back {
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+
+}
+
+
+.red{
+    color: rgb(244, 6, 6);
+
+}
+
+
+
+

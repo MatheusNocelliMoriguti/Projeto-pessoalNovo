@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovações</title>
+    <link class="img-logo" rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styleIndex.css">
+   
+    <link rel="stylesheet" href="./css/inovacao.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/imgs/logo.png">
+            </div>
+            <div class="list-navbar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./PE.html">Equipes & Pilotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./sobremim.html">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inovacao.html">Inovações</a></li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button class="cadastro-button"><a href="./cadastro.html">Cadastre-se</a></button>
+                <button class="login-button"><a href="./login.html">Login</a></button>
+            </div>
+        </nav>
+    </header>
+    <div class="img">
+       <div> <h1 class="inovacao">INOVAÇÕES</h1></div>
+       
+    <div class="cards-container">
+        <div id="card">
+            <div class = "face" id="front">
+                <span>A Fórmula 1 está adotando combustíveis sintéticos e fontes de bioenergia, contribuindo para a meta de emissão zero até 2030. Esses combustíveis são criados com tecnologias de captura de carbono e biomassa.
+
+                    <b class="red">Redução de Emissões:</b> Reduz as emissões de CO₂ nos motores.
+                    <b class="red">Sustentabilidade:</b> Fontes renováveis, como resíduos agrícolas.</span>
+            </div>
+    
+            <div class = "face" id="back">
+                <span style="color:rgb(182, 83, 2)  ;margin-top: -30px;">Combustivel Sintéticos</span> <br>
+                <img class="imagemCombustivel" src="./assets/imgs/posto-de-gasolina.png" alt="">
+            </div>
+        </div>
+        
+        <div id="card2">
+            <div class = "face" id="front">
+                <span>
+                O uso de materiais reciclados em componentes do carro reduz o impacto ambiental, mantendo a resistência e a leveza essenciais.
+
+                <b class="red">Metais Leves:</b> Melhoram a eficiência e reduzem o consumo.
+                <b class="red">Fibra de Carbono Reciclada:</b> Economiza recursos e mantém a resistência.
+            </span>
+            </div>
+    
+            <div class = "face" id="back">
+                <span style="color:rgb(182, 83, 2);">Materiais Sustentáveis</span>
+                <img  class='energia'  src="./assets/imgs/energia-sustentavel.png" alt="">
+            </div>
+        </div>
+        
+        <div id="card3">
+            <div class = "face" id="front">
+                <span>
+                A introdução de motores híbridos foi um passo importante, permitindo que a Fórmula 1 combine potência com eficiência energética.
+
+                <b class="red">Recuperação de Energia:</b> Reaproveita energia das frenagens para recarregar baterias.
+                <b class="red">Redução de Combustível:</b> Menos consumo e emissões.
+                </span>
+
+            </div>
+    
+            <div class = "face" id="back">
+                <span style="color:rgb(182, 83, 2);">Motores Híbridos </span>
+                <img width="177px"  src="./assets/imgs/motor.png" alt="">
+            </div>
+        </div>
+        
+        <div id="card4">
+            <div class = "face" id="front">
+                <span>
+                O design aerodinâmico reduz o consumo de energia e melhora a performance dos carros.
+
+                <b class="red">CFD: </b>Simulações para projetar formas mais eficientes.
+                <b class="red">Design de Asa Frontal:</b> Reduz o arrasto e melhora a eficiência.
+            </span>
+            </div>
+    
+            <div class = "face" id="back">
+                <span style="color:rgb(182, 83, 2);">Aerodinâmica </span>
+                <img width="177px"  src="./assets/imgs/formula-1.png" alt="">
+            </div>
+        </div>
+    </div>
+        
+        
+    </div>
+</body>
+</html>
+
+<script>
+
+const card = document.querySelector('#card') // pegando  a div do card e armazenando na variavel 
+    card.addEventListener("click",(e)=>{ // adicionando  um escutador de evento  para quando o usuario clicar no card 
+        card.classList.toggle("flip") // adcionando a class flip no card, para mudar  do front pro back (pega lista de class e adciona a class flip)
+    })
+
+    const card2 = document.querySelector('#card2')
+    card2.addEventListener("click",(e)=>{
+        card2.classList.toggle("flip")
+    })
+
+    const card3 = document.querySelector('#card3')
+    card3.addEventListener("click",(e)=>{
+        card3.classList.toggle("flip")
+    })
+    const card4 = document.querySelector('#card4')
+    card4.addEventListener("click",(e)=>{
+        card4.classList.toggle("flip")
+    })
+</script>

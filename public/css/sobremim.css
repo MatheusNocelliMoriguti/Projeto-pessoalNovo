@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(../assets/imgs/dois\ carros.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+.body2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imagensTextoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.imagensMatheus img {
+    width: 187px; /* Ajuste o tamanho da imagem conforme o exemplo */
+    height: 214px;
+    background-size: 100% 100%;
+    border-radius: 6px;
+    margin-right: 20px; /* Espaço entre imagem e texto */
+    margin-left: 94px;
+    margin-top: 26px;
+   
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: #181818;
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    margin-top: 38px;
+}
+
+.container span {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+body span {
+    color: white;
+    font-size: 30px;
+}
+

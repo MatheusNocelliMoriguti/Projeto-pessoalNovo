@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovações da Fórmula 1 e a Agenda 2030</title>
+    <style>
+        /* Reseta e fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('https://exemplo.com/carro-formula1.jpg'); /* Insira o link da imagem desejada */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.85);
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+            overflow-y: auto;
+            height: 90vh;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .innovation-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 100%;
+            overflow-y: auto;
+        }
+
+        .innovation {
+            background: linear-gradient(145deg, rgba(255, 204, 0, 0.2), rgba(255, 0, 0, 0.2));
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .innovation:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(255, 204, 0, 0.4);
+        }
+
+        .innovation h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .innovation p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .innovation ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            list-style-type: disc;
+            color: #ffcc00;
+        }
+
+        .innovation ul li {
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        /* Barra de rolagem personalizada */
+        .overlay::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .overlay::-webkit-scrollbar-thumb {
+            background-color: #ffcc00;
+            border-radius: 4px;
+        }
+
+        /* Animações */
+        .innovation-container > .innovation {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .innovation:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+        .innovation:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        .innovation:nth-child(3) {
+            animation-delay: 0.7s;
+        }
+        .innovation:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+        .innovation:nth-child(5) {
+            animation-delay: 1.1s;
+        }
+        .innovation:nth-child(6) {
+            animation-delay: 1.3s;
+        }
+        .innovation:nth-child(7) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .innovation h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Inovações da Fórmula 1 e a Agenda 2030</h1>
+        <div class="innovation-container">
+            <div class="innovation">
+                <h2>1. Combustíveis Sintéticos e Bioenergia</h2>
+                <p>A Fórmula 1 está adotando combustíveis sintéticos e fontes de bioenergia, contribuindo para a meta de emissão zero até 2030. Esses combustíveis são criados com tecnologias de captura de carbono e biomassa.</p>
+                <ul>
+                    <li><strong>Redução de Emissões:</strong> Reduz as emissões de CO₂ nos motores.</li>
+                    <li><strong>Sustentabilidade:</strong> Fontes renováveis, como resíduos agrícolas.</li>
+                </ul>
+            </div>
+            <div class="innovation">
+                <h2>2. Materiais Sustentáveis</h2>
+                <p>O uso de materiais reciclados em componentes do carro reduz o impacto ambiental, mantendo a resistência e a leveza essenciais.</p>
+                <ul>
+                    <li><strong>Fibra de Carbono Reciclada:</strong> Economiza recursos e mantém a resistência.</li>
+                    <li><strong>Metais Leves:</strong> Melhoram a eficiência e reduzem o consumo.</li>
+                </ul>
+            </div>
+            <div class="innovation">
+                <h2>3. Eletrificação e Híbridos</h2>
+                <p>A introdução de motores híbridos foi um passo importante, permitindo que a Fórmula 1 combine potência com eficiência energética.</p>
+                <ul>
+                    <li><strong>Recuperação de Energia:</strong> Reaproveita energia das frenagens para recarregar baterias.</li>
+                    <li><strong>Redução de Combustível:</strong> Menos consumo e emissões.</li>
+                </ul>
+            </div>
+            <div class="innovation">
+                <h2>4. Avanços em Aerodinâmica</h2>
+                <p>O design aerodinâmico reduz o consumo de energia e melhora a performance dos carros.</p>
+                <ul>
+                    <li><strong>Design de Asa Frontal:</strong> Reduz o arrasto e melhora a eficiência.</li>
+                    <li><strong>CFD:</strong> Simulações para projetar formas mais eficientes.</li>
+                </ul>
+            </div>
+            <div class="innovation">
+                <h2>5. Segurança Avançada</h2>
+                <p>A segurança dos pilotos é priorizada com tecnologias como o Halo e materiais resistentes no cockpit.</p>
+                <ul>
+                    <li><strong>Halo:</strong> Protege o piloto de impactos.</li>
+                    <li><strong>Célula de Sobrevivência:</strong> Máxima proteção em caso de colisão.</li>
+                </ul>
+            </div>
+            <div class="innovation">
+                <h2>6. Telemetria e IA</h2>
+                <p>A telemetria monitora o desempenho em tempo real, e a IA ajuda a prever falhas e otimizar estratégias.</p>
+                <ul>
+                    <li><strong>Monitoramento em Tempo Real:</strong> Dados essenciais analisados em tempo real.</li>
+                    <li><strong>Inteligência Artificial:</strong> Prediz falhas e melhora o desempenho.</li>
+                </ul>
+            </div>
+            <div class="innovation">
+                <h2>7. Economia Circular</h2>
+                <p>Políticas de reciclagem e reutilização reduzem o desperdício e promovem a sustentabilidade.</p>
+                <ul>
+                    <li><strong>Reciclagem de Pneus:</strong> Pneus usados são reciclados.</li>
+                    <li><strong>Reutilização de Peças:</strong> Componentes são recondicionados.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

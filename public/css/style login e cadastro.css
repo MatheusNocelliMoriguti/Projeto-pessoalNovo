@@ -1,0 +1,243 @@
+/* Adicionar aqui toda a estilização criada para sua aplicação. */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/imgs/dois\ carros.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Barlow', sans-serif;
+    /* overflow: hidden;  */
+}
+/* 
+:root {
+    
+        --tamanho-header: 80px;
+        --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+        --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+        --tamanho-footer: 70px;
+
+} */
+
+.header {
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    top: 0; 
+    left: 0px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    margin-bottom: 30px;
+    
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10px; 
+}
+
+.titulo img {
+    margin-top: 10px;
+    height: 110px;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    
+    
+}
+.navbar .navbar-elementos{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.navbar a {
+    color: #fff;
+    font-style: normal;
+    font-weight: 900;
+    margin-left: 20px;
+    text-decoration: none;
+   
+}
+
+.navbar a:hover {
+    color: #B00505;
+}
+
+.navbar button{
+    background-color: transparent;
+    border: solid 3px #B00505;
+    border-radius: 8px;
+   
+    color: #B00505;
+    font-weight: 900;
+    transition: transform 0.8s, background-color 0.8s, border 0.8s;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: fit-content;
+    
+   
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.845); 
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.card h2{
+    text-align: center;
+}
+
+
+.formulario {
+    padding: 5%;
+}
+
+.campo {
+    padding: 2%;
+}
+
+.iptCampos {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #B00505;
+    border-radius: 5px;
+    width: 90%;
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.formulario button {
+    /* margin-top: 5%; */
+    margin-bottom: 7px;
+    width: 100%;
+    padding: 10px;
+    background-color: #B00505;
+    border: none;
+    border-radius: 7px;
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.8s, background-color 0.8s, border 0.8s;
+}
+
+.botao {
+    margin-top: 5%;
+    width: 100%;
+    padding: 10px;
+    background-color: #B00505;
+    border: none;
+    border-radius: 7px;
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.8s, background-color 0.8s, border 0.8s;
+}
+
+.botao:hover {
+    background-color: #000;
+    transform: translateY(-5px);
+    border: 2px solid #B00505;
+}
+
+.footer {
+    background-color: #B00505;
+    height: 7vh;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    margin-top: 48px;
+    justify-content: center;
+}
+
+.footer h4{
+    margin-bottom: 0;
+}
+
+.version {
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+
+.footer .container {
+    justify-content: center;
+    align-self: center;
+}
+
+.x {
+    color: #B00505;
+    text-decoration: none; 
+}
+
+
+#senha {
+
+    display: flex;
+    text-align: center;
+    border: 2px solid #B00505;
+    border-radius: 5px;
+    width: 95%;
+    height: 30px;
+    background-color: transparent;
+    color: #ffffff;
+    
+}   
+
+#senha input {
+    background: none;
+    border: none;
+    text-align: center;
+    width: 85%;
+    height: 100%;
+    /* width: 90%;
+    height: 100%; */
+    color: #ffffff;
+    outline: none;
+}
+
+
+.loginA {
+    background-color: transparent;
+    border: solid 1px;
+     border-radius: 10px;
+     border-color: #ffff;
+     padding: 10px 15px;
+     margin-right: 20px;
+     
+}
+
+
+
+
