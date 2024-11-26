@@ -1,83 +1,85 @@
-const $startGameButton = document.querySelector(".start-quiz")
+const $startGameButton = document.querySelector(".start-quiz") // pegando as variaveis que existem no html
 const $questionsContainer = document.querySelector(".questions-container")
 const $answersContainer = document.querySelector(".answers-container")
 const $questionText = document.querySelector(".question")
 const $nextQuestionButton = document.querySelector(".next-question")
 
-$startGameButton.addEventListener("click", startGame)
-$nextQuestionButton.addEventListener("click", displayNextQuestion)
+$startGameButton.addEventListener("click", startGame)   // capturar o evento de click, depois rodar a função de começar o quiz
+$nextQuestionButton.addEventListener("click", displayNextQuestion) // capturar evento do click para proxima pergunta
 
-let currentQuestionIndex = 0
-let totalCorrect = 0
+let currentQuestionIndex = 0  //qual pergunta atual
+let totalCorrect = 0 // acertos (index++)
 
 
 function startGame() {
-    $startGameButton.classList.add("hide")
-    $questionsContainer.classList.remove("hide")
-    displayNextQuestion()
+    $startGameButton.classList.add("hide")  // botao de começar o quiz desaparece
+    $questionsContainer.classList.remove("hide") // questões aparece novamente, ela estava com a class hide
+    displayNextQuestion() // funcão para a proxima pergunta
 }
 
 function displayNextQuestion(){
     resetState()
 
-    if(questions.length == currentQuestionIndex){
-        return finishGame()
+    if(questions.length == currentQuestionIndex){ // verificando se o jogo acabou
+        return finishGame()  // parando o resto da funcção indo para função de finalizar
     }
 
-  $questionText.textContent = questions[currentQuestionIndex].question
-  questions[currentQuestionIndex].answers.forEach(answer =>{
+  $questionText.textContent = questions[currentQuestionIndex].question // vendo proxima pergunta
+  questions[currentQuestionIndex].answers.forEach(answer =>{ // pegando respostas da pergunta(foreAach) acessando cada uma das respostas
     const newAnswer = document.createElement("button")
     newAnswer.classList.add("button" ,"answer")
-    newAnswer.textContent = answer.text
-    if (answer.correct) {
-        newAnswer.dataset.correct = answer.correct
+    newAnswer.textContent = answer.text // acessando o texto q esta dentro do elemento
+    if (answer.correct) {  // verificando se é correta ou nao 
+        newAnswer.dataset.correct = answer.correct // valor do dataset, variavel com valor, adcionando uma informação caso seja true
     }
-    $answersContainer.appendChild(newAnswer)
+    $answersContainer.appendChild(newAnswer) // adicionando elemento filho na pergunta
 
-    newAnswer.addEventListener("click", selectAnswer)
+    newAnswer.addEventListener("click", selectAnswer) // quando o usurario clicar roda a funcão para ver se é true
 
   })
 }
 
-function resetState(){
-    while($answersContainer.firstChild){
-        $answersContainer.removeChild($answersContainer.firstChild)
+function resetState(){ // resetando quiz
+    while($answersContainer.firstChild){  // remover filhos do elemento pai while, verificando se tem filho
+        $answersContainer.removeChild($answersContainer.firstChild) // se tiver, remove!
       }
-      document.body.removeAttribute("class")
-      $nextQuestionButton.classList.add("hide")
+      document.body.removeAttribute("class") // removendo as class que o body tem resetando ele 
+      $nextQuestionButton.classList.add("hide") // desaparecendo com o button proxima pergunta
 }
 
 function selectAnswer(){
-    const answerClicked = event.target
-    if(answerClicked.dataset.correct){
-        document.body.classList.add("correct")
-        totalCorrect++
+    const answerClicked = event.target // qual foi o elemento que o usurario clicou
+    if(answerClicked.dataset.correct){ // se estiver o data.set chamdo correct ee clicou na respsta correta
+        document.body.classList.add("correct") // adicionando a lista para poder estilizar o body
+        totalCorrect++ // adcionando na variavel
     }else{
-        document.body.classList.add("incorrect")
+        document.body.classList.add("incorrect") // se for incorreto nao faça nada, o body fica vermelho no css
      
     }
 
-    document.querySelectorAll('.answer').forEach(button =>{
-        if(button.dataset.correct){
+    document.querySelectorAll('.answer').forEach(button =>{ // selecionando todos o elemt que tenha a class 
+        if(button.dataset.correct){ // mesma analise se for o button correct fica verde
             button.classList.add("correct")
         }else{
-            button.classList.add("incorrect")
+            button.classList.add("incorrect") //caso contrario vermelho 
 
         }
-        button.disabled = true
+        button.disabled = true // desabilitand button. usuario nao clica mais
     })
-    $nextQuestionButton.classList.remove("hide")
-    currentQuestionIndex++
+    $nextQuestionButton.classList.remove("hide") // button proxima pergunta voltando 
+    currentQuestionIndex++ // adicionando questões passadas na const
 
 }
 
 function finishGame(){
-    const totalQuestions = questions.length
+    const totalQuestions = questions.length // total de questoes
     const performance =  Math.floor(totalCorrect * 100 / totalQuestions)
+    //calcular performance arredondando para baixo 
+    
     let msg = ''
 
-    switch (true){
-        case(performance >= 90):
+    switch (true){  // mesma coisa que if else 
+        case(performance >= 90):  // caso a performance.....
         msg = 'Parabéns, você está super avançado  '
         break
         case(performance >= 70):
@@ -102,6 +104,42 @@ function finishGame(){
     Refazer teste
     <button/>
     `
+
+    sendHistorico(totalCorrect)
+}
+
+function sendHistorico(totalCorrect) {
+
+  fetch("/quiz/cadastrar", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        idUsuarioServer: sessionStorage.ID_USUARIO,
+        qtdAcertosServer: totalCorrect
+    })
+}).then(function (resposta) {
+
+    if (resposta.ok) {
+        // console.log(resposta);
+
+        alert("ENVIADO COM SUCESSO")
+    } else {
+
+        alert("Houve um erro ao tentar enviar as respostas!");
+
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            // finalizarAguardar(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
 }
 
 
@@ -113,8 +151,7 @@ function finishGame(){
 
 
 
-
-
+// banco de perguntas, array e cada posição do array(answer) é umapossivel resposta
 const questions = [
     {
       question: "Dentro de qual elemento HTML colocamos o JavaScript?",

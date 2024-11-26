@@ -4,29 +4,29 @@
     var emailValidado = false
     var senhaValidado = false
     var confirmacaoValidado = false
-    var equipeValidado = false
+    // var equipeValidado = false
     
 
   function cadastrar(){
 
   //variaveis para as inputs
 
-    var nome = document.getElementById("input_nome").value
-    var email = document.getElementById("input_email").value
-    var senha = document.getElementById("input_senha").value
+    var nomeVar = document.getElementById("input_nome").value
+    var emailVar = document.getElementById("input_email").value
+    var senhaVar = document.getElementById("input_senha").value
     var confirmacao = document.getElementById("input_confirmacao_senha").value
-    var equipe = document.getElementById("input_equipe").value
+    var equipeVar = document.getElementById("slc_equipes").value
     
 
    // Validações para redirecionar
   
-    if(nomeValidado == false || emailValidado == false ||  senhaValidado == false || confirmacaoValidado == false || equipeValidado == false){
+    if(nomeValidado == false || emailValidado == false ||  senhaValidado == false || confirmacaoValidado == false ){
 
 
 
   //validar nome
 
-    if(nome.length > 0){
+    if(nomeVar.length > 0){
         divvalidarNome.innerHTML = `✅`;
         nomeValidado = true
 
@@ -38,7 +38,7 @@
 
     //validação do email
 
-    if (email.includes("@")) {
+    if (emailVar.includes("@")) {
         divvalidarEmail.innerHTML = `✅`
         emailValidado = true
 
@@ -62,11 +62,11 @@
   var temLetraM = false;
   var temLetraMCorreto= ``;
 
-if (senha.length >= 8){
+if (senhaVar.length >= 8){
     
-    for (var atual = 0; atual < senha.length; atual++) {
+    for (var atual = 0; atual < senhaVar.length; atual++) {
        
-        var atual2 = senha[atual];
+        var atual2 = senhaVar[atual];
         
         if(atual2 >= 'A' && atual2 <= 'Z') {
             temLetraM = true;
@@ -101,7 +101,7 @@ if (senha.length >= 8){
 //confirmação da senha
 
 if(confirmacao.length >= 8) {
-    if(confirmacao == senha) {
+    if(confirmacao == senhaVar) {
     
         divvalidarSenha2.innerHTML = `✅`;
         confirmacaoValidado = true
@@ -117,14 +117,14 @@ if(confirmacao.length >= 8) {
     confirmacaoValidado = false
     } 
 
-    if(nomeValidado && emailValidado &&  senhaValidado && confirmacaoValidado && equipeValidado){
+    if(nomeValidado && emailValidado &&  senhaValidado && confirmacaoValidado){
         botao.innerHTML = `Logar`
 
         input_nome.readOnly = true
         input_email.readOnly = true
         input_senha.readOnly = true
         input_confirmacao_senha.readOnly = true
-        input_equipe.readOnly = true
+        slc_equipes.readOnly = true
        
     }
 
@@ -133,23 +133,64 @@ if(confirmacao.length >= 8) {
   }
 
 
-   // validação equipe
-   if(equipe.includes('Mercedes') || equipe.includes('Mclaren') || equipe.includes('Ferrari') || equipe.includes('RedBull')){
-    divvalidarEquipe.innerHTML = `✅`;
-    equipeValidado = true
+//    // validação equipe
+//    if(equipeVar.includes('Mercedes') || equipeVar.includes('Mclaren') || equipeVar.includes('Ferrari') || equipeVar.includes('RedBull')){
+//     divvalidarEquipe.innerHTML = `✅`;
+//     equipeValidado = true
 
-} else {
-    divvalidarEquipe.innerHTML = ` Insira uma Equipe válida `;
-    equipeValidadoValidado = false
-}
+// } else {
+//     divvalidarEquipe.innerHTML = ` Insira uma Equipe válida `;
+//     equipeValidado = false
+// }
 
-if (nomeValidado && emailValidado && senhaValidado && confirmacaoValidado && equipeValidado) {
+if (nomeValidado && emailValidado && senhaValidado && confirmacaoValidado ) {
   alert("Cadastro concluído com sucesso!");
 
-    
+
+fetch("/usuarios/cadastrar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      nomeServer: nomeVar,
+      emailServer: emailVar,
+      senhaServer: senhaVar,
+      equipeServer: equipeVar
+      // idEmpresaVincularServer: idEmpresaVincular
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        // cardErro.style.display = "block";
+
+        // mensagem_erro.innerHTML =
+        //   "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+        setTimeout(() => {
+          window.location = "login.html";
+        }, "2000");
+
+        // limparFormulario();
+        // finalizarAguardar();
+      } else {
+        throw "Houve um erro ao tentar realizar o cadastro!";
+      }
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      // finalizarAguardar();
+    });
+
+  return false;
+  }
 }
 
-}
+
 
   function home() {
     window.location.href = "../index.html";

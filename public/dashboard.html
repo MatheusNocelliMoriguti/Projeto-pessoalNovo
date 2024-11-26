@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class="img-logo" rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+  
+    <title>Dashboard</title>
+     <!-- Incluindo a biblioteca Chart.js para desenhar gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./css/styleDashboard.css">
+
+
+  </head>
+  
+ 
+<body onload="buscarHistorico()">
+
+  <div class="main-container">
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/imgs/logo.png"> 
+        </div>
+      <div class="buttons" id="user-buttons">
+        <button class="home-button"><a href="./index.html">HOME</a></button>
+      </div>
+    </nav>
+
+    <div class="dashboard-public">
+
+      <div class="KPI">
+
+
+        <div class="kpi1">
+
+          <div class="titulo1">
+            <span class="titulo">Básico</span>
+          </div>
+          <span id="resultadoKPI1" class="resultadoKPI">
+
+          </span>
+        </div>
+
+        <div class="kpi2">
+
+          <div class="titulo1">
+            <span class="titulo">Intermediário</span>
+          </div>
+          <span id="resultadoKPI2" class="resultadoKPI">
+
+          </span>
+        </div>
+        <div class="kpi3">
+
+            <div class="titulo1">
+              <span class="titulo">Avançado</span>
+            </div>
+            <span id="resultadoKPI3" class="resultadoKPI">
+  
+            </span>
+          </div>
+
+
+      </div>
+
+      <div class="grafico-linha">
+        <div class="titulo1">
+          <span class="titulo">Qtd de pessoas por equipe</span>
+        </div>
+        <canvas id="setor" style="width: 10vw;"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<script src="js/dashboard.js"></script>

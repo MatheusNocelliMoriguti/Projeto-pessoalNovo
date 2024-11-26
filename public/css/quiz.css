@@ -1,8 +1,10 @@
 * {
     padding: 0;
-    margin: 0;
+    margin: 0;    
     box-sizing: border-box;
 }
+
+/* resetando todo o css  */
 
 button {
     cursor: pointer;
@@ -114,7 +116,7 @@ body {
 
    border-radius: 6px;
    padding: 40px;
-   /* box-shadow: 0 0 2px 2px; */
+   
   
    
 
@@ -144,8 +146,8 @@ body {
 .answers-container{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+     grid-template-columns: 1fr 1fr;  /* o grid esta com 2 colunas do mesmo tamanho(largura)*/
+    gap: 16px; /*espaço entre colunas*/
    
 }
 
@@ -162,14 +164,14 @@ body {
     border: 0;
     border-radius: 6px;
     height: 48px;
-    padding: 0 32px;
+    padding: 0 32px;  /* espaço entre os botoes direita e esquerda*/
     
-    transition: 0.2s;
+    transition: 0.2s;  /* transição do hover */
 }
 
 
 button:hover{
-    filter: brightness(0.8);
+    filter: brightness(0.8); /* serve para escurecer o botton ao passar */
 }
 
 .answer:disabled{   
@@ -177,7 +179,7 @@ button:hover{
 }
 
 .hide{
-    display: none;
+    display: none;  /* esconder elemnetos que tem a class hide */
 }
 
 .correct{
